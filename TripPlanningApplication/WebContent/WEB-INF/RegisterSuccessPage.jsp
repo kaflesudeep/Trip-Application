@@ -15,6 +15,12 @@ Thank you your credential is approved and saved.
 usha
 kafle
 
+
+ 
+usha
+kafle
+
+
 Do you want to Login into your account right now?
 
 <form method="Post" action="welcome">  
