@@ -12,7 +12,7 @@
 Thank you your credential is approved and saved. 
  your username is : XXys
  hjvjhv
-
+mnbmnbmnb
 Do you want to Login into your account right now?
 
 <form method="Post" action="welcome">  
