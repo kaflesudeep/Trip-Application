@@ -9,18 +9,6 @@
 <body>
 
 
-Thank you your credential is approved and saved. 
- your username is : XXys
- 
-usha
-kafle
- 
- 
- 1121
-hjhjh
- 
-usha
-kaflevbv hjhj
 
 
 Do you want to Login into your account right now?
