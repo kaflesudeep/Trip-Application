@@ -7,17 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-xcx
+
 
 Thank you your credential is approved and saved. 
  your username is : XXys
- hjvjhv
-mnbmnbmnbvdv
-sdsds
-sfdf
+ 
+usha
+kafle
 
-df
-df
+
+ 
+usha
+kaflevbv
 
 
 Do you want to Login into your account right now?
