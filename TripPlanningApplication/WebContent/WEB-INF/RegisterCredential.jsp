@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+   <%@page import="java.text.SimpleDateFormat"%>
+   <%@page import="java.text.DateFormat"%>
+<%@page import="java.util.Date"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -193,9 +196,8 @@
 <div class="form-style-10">
 <h2>Login In!<span>Plan Your Perfect Trip  Using this Site! First Name: ${userRegisterInformation.firstName}</span></h2>
 
- First Name: ${userRegisterInformation.firstName}<br>
-Last Name : ${userRegisterInformation.lastName}<br>
-Date Of Birth: ${userRegisterInformation.dateofBirth}<br>
+Your Account Id is : ${userIdNum}
+ Welcome to Easy Trip : ${userRegisterInformation.firstName}<br>
 
 
 <div>
@@ -210,7 +212,7 @@ Date Of Birth: ${userRegisterInformation.dateofBirth}<br>
 
 <tr> 
 			<td><label id="label"> Please Choose c Your User Name: </label> </td>
-			<td><input type="text" name= "userName" class="uname" > <span class="status"></span>  </td>
+			<td><input type="text" name= "userId" class="uname" > <span class="status"></span>  </td>
 		</tr>
 		
 		<tr> 
@@ -232,19 +234,45 @@ Date Of Birth: ${userRegisterInformation.dateofBirth}<br>
 <table width="75%">	
 
 <tr> 
-			<td><label id="label"> securityQuestion1  </label> </td>
+			<td><label id="label" name = "securityQuestion1"> securityQuestion1  </label> </td>
 			<td><input type="text" name= "securityAnswer1" >   </td>
 		
 		
 		</tr>
 
 <tr>
-<td><label id="label"> securityQuestion2  </label> </td>
+<td><label id="label" name= "securityQuestion2"> securityQuestion2  </label> </td>
 			<td><input type="text" name= "securityAnswer2" >   </td>
 		
 	
 
 </tr>
+
+
+<tr>
+<%
+DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+Date dateobj = new Date();
+String date = df.format(dateobj);
+System.out.println(df.format(dateobj));
+%>
+
+<td><label id="label"> Todays date:  </label> </td>
+			<td><input type="text" name= "dateOfMembership"  value=<%=date%>>   </td>
+		
+	
+
+</tr>
+
+<tr>
+
+<td><label id="label"> user Id:  </label> </td>
+			<td><input type="text" name= "userIdNumber"  value=${userIdNum}>   </td>
+		
+	
+
+</tr>
+
 </table>
 
 

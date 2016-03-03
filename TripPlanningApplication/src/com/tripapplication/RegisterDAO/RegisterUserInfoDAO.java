@@ -3,7 +3,7 @@ package com.tripapplication.RegisterDAO;
 import java.sql.Timestamp;
 import java.util.Date;
 
-public class TripApplicationRegisterationDAO {
+public class RegisterUserInfoDAO {
 	 private String firstName; 
 	 private String lastName; 
 	 private String middleName;

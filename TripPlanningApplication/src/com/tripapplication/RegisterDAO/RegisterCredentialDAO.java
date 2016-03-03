@@ -1,33 +1,32 @@
 package com.tripapplication.RegisterDAO;
 
-public class TripApplicationCredentialDAO {
-
-	private String userName;
+public class RegisterCredentialDAO {
+	private Long userIdNumber; 
+	private String userId;
 	private String userPassword;
-	private String reUserpassword;
 	private String securityQuestion1;
 	private String securityAnswer1;
 	private String securityQuestion2;
 	private String securityAnswer2;
 	private String dateOfMembership;
 	
-	public String getUserName() {
-		return userName;
+	public Long getUserIdNumber() {
+		return userIdNumber;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUserIdNumber(Long userIdNumber) {
+		this.userIdNumber = userIdNumber;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 	public String getUserPassword() {
 		return userPassword;
 	}
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
-	}
-	public String getReUserpassword() {
-		return reUserpassword;
-	}
-	public void setReUserpassword(String reUserpassword) {
-		this.reUserpassword = reUserpassword;
 	}
 	public String getSecurityQuestion1() {
 		return securityQuestion1;
@@ -59,5 +58,8 @@ public class TripApplicationCredentialDAO {
 	public void setDateOfMembership(String dateOfMembership) {
 		this.dateOfMembership = dateOfMembership;
 	}
-
+	
+	
+	
+	
 }

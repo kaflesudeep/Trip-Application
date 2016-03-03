@@ -2,7 +2,7 @@ package com.tripapplication.RegisterDAOImpl;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
-import com.tripapplication.RegisterDAO.TripApplicationRegisterationDAO;
+import com.tripapplication.RegisterDAO.RegisterUserInfoDAO;
 import com.tripapplication.SpecialClass.CurrentTime;
 
 import java.sql.DriverManager;
@@ -17,12 +17,12 @@ public class RegisterUserInfoDAOImpl {
 
 	 static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
 	 static final String DB_URL = "jdbc:mysql://localhost/TRIPAPPLICATIONDATABASE";
-	   
+	 Long userIdNum;  
 	//  Database credentials
 	 static final String USER = "root";
 	 static final String PASS = "1234";
 	   
-	public void add (TripApplicationRegisterationDAO UserInforamtion){
+	public Long add (RegisterUserInfoDAO UserInforamtion){
 		
 		Connection connDatabase = databaseConnection();
 		
@@ -31,8 +31,8 @@ public class RegisterUserInfoDAOImpl {
 
 		try {
 		PreparedStatement preparedStatement = connDatabase.prepareStatement(insertTableSQL);
-		
-		preparedStatement.setLong(1, createUserRegistrationNumber());
+		userIdNum = createUserRegistrationNumber();
+		preparedStatement.setLong(1, userIdNum);
 		preparedStatement.setString(2, UserInforamtion.getFirstName());
 		preparedStatement.setString(3, UserInforamtion.getMiddleName());
 		preparedStatement.setString(4, UserInforamtion.getLastName());
@@ -57,6 +57,7 @@ public class RegisterUserInfoDAOImpl {
 				e.printStackTrace();
 			}
 		}
+		return userIdNum;
 		
 	}
 	
@@ -76,10 +77,7 @@ public class RegisterUserInfoDAOImpl {
 			 
 			Long UserID = rs.getLong("USER_REGISTRATION_NUMBER");
 			
-			System.out.println(UserID + "<user Id  .... i "+ i);
-			System.out.println(UserID != i);
-			
-			
+				
 			if (UserID != i){
 				UserRegiNum = i; 
 				break; 
@@ -105,9 +103,8 @@ public class RegisterUserInfoDAOImpl {
 		      Class.forName("com.mysql.jdbc.Driver");
 
 		      //STEP 3: Open a connection
-		      System.out.println("Connecting to a selected database...");
 		      conn = (Connection) DriverManager.getConnection(DB_URL, USER, PASS);
-		      System.out.println("Connected database successfully...");
+		     
 		 }catch(Exception e){
 		      //Handle errors for Class.forName
 		      e.printStackTrace();

@@ -35,7 +35,7 @@ import com.mysql.jdbc.Connection;
 			      
 			     			    
 	            String uname = request.getParameter("uname");  
-	            PreparedStatement ps = conn.prepareStatement("select user_Name from tripapplicationcredentialtable where user_Name=?");
+	            PreparedStatement ps = conn.prepareStatement("select user_Id from tripapplicationcredentialtable where user_Id=?");
 	            
 	            ps.setString(1,uname);  
 	            ResultSet rs = ps.executeQuery();  
