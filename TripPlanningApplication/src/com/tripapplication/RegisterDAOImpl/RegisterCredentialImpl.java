@@ -41,7 +41,8 @@ import java.text.SimpleDateFormat;
 			preparedStatement.setString(5, UserCredentialInformation.getSecurityAnswer1());
 			preparedStatement.setString(6, UserCredentialInformation.getSecurityQuestion2());
 			preparedStatement.setString(7, UserCredentialInformation.getSecurityAnswer2());
-			preparedStatement.setString(8, UserCredentialInformation.getDateOfMembership());
+			CurrentTime currenttime = new CurrentTime();
+			preparedStatement.setTimestamp(8, currenttime.getCurrentTimeStamp());
 			preparedStatement .executeUpdate();
 			System.out.println("Credential Data inserted to the database");
 			

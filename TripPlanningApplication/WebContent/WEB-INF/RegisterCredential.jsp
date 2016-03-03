@@ -248,22 +248,6 @@ Your Account Id is : ${userIdNum}
 
 </tr>
 
-
-<tr>
-<%
-DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-Date dateobj = new Date();
-String date = df.format(dateobj);
-System.out.println(df.format(dateobj));
-%>
-
-<td><label id="label"> Todays date:  </label> </td>
-			<td><input type="text" name= "dateOfMembership"  value=<%=date%>>   </td>
-		
-	
-
-</tr>
-
 <tr>
 
 <td><label id="label"> user Id:  </label> </td>

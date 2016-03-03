@@ -34,6 +34,7 @@ $(function() {
 	   showAnim: 'slideDown',
 	   duration: 'fast',
 	   dateFormat: 'dd-mm-yy'
+	
 	});
 });
 
@@ -211,7 +212,7 @@ $(function() {
 		
 		<tr> 
 			<td><label id="label"> Date of Birth: </label> </td>
-			<td><input type="text" name= "dateofBirth" id="datepicker"  value="2016-02-24">   </td>
+			<td><input type="text" name= "dateofBirth" id="datepicker">   </td>
 		</tr>
 </table>
 
