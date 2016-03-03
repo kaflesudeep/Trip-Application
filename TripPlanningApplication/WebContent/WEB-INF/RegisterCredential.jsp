@@ -6,6 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<!-- css related  -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+
 <style type="text/css">
 .form-style-10{
     width:450px;
@@ -128,7 +134,59 @@
 }
 </style>
 
+<style type="text/css">  
+.flable {  
+ color: gray;  
+}  
+  
+.status {  
+ font-family: verdana;  
+ font-size: 12px;  
+}  
+  
+.uname {  
+ color: blue;  
+}  
+</style>
 
+<!-- Jquery Code to check if the user credential is available or not, used ajax to check -->
+<!-- modified : CheckAvialibility.java, Web.xml -->
+
+<script src="jquery.js" type="text/javascript"></script>  
+ <script type="text/javascript">  
+          $(document).ready(function(){  
+              $(".uname").change(function(){  
+                  var uname = $(this).val();  
+                  if(uname.length >= 3){  
+                      //$(".status").html("<img src='images/loading.gif'><font color=gray> Checking availability...</font>");  
+
+                	  $(".status").html("<font color=gray> Checking availability...</font>");  
+                       $.ajax({  
+                          type: "POST",  
+                          url: "check",  
+                          data: "uname="+ uname,  
+                          success: function(msg){  
+                        	  
+                        	  $(".status").html(msg);
+                          
+//                               $(".status").ajaxComplete(function(event, request, settings){  
+                                     
+//                                   $(".status").html(msg);  
+  
+//                               });  
+                          }  
+                      });   
+                  }  
+                  else{  
+                         
+                      $(".status").html("<font color=red>Username should be <b>3</b> character long.</font>");  
+                  }  
+                    
+              });  
+          });  
+        </script>  
+        
+        
 </head>
 <body>
 
@@ -139,16 +197,20 @@
 Last Name : ${userRegisterInformation.lastName}<br>
 Date Of Birth: ${userRegisterInformation.dateofBirth}<br>
 
+
 <div>
 <form method="Post" action="registerCredential">  
  <div class="section"><span>1</span>Credentials</div>
     <div class="inner-wrap">
  
+ 
+ 
+ 
 <table>
 
 <tr> 
-			<td><label id="label"> Please Enter Your User Name: </label> </td>
-			<td><input type="text" name= "userName" >   </td>
+			<td><label id="label"> Please Choose c Your User Name: </label> </td>
+			<td><input type="text" name= "userName" class="uname" > <span class="status"></span>  </td>
 		</tr>
 		
 		<tr> 
