@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
-import com.tripapplication.RegisterDAO.RegisterCredentialDAO;
-import com.tripapplication.RegisterDAO.RegisterUserInfoDAO;
-import com.tripapplication.RegisterDAOImpl.RegisterCredentialImpl;
-import com.tripapplication.RegisterDAOImpl.RegisterUserInfoDAOImpl;
+import com.tripapplication.DAO.RegisterCredentialDAO;
+import com.tripapplication.DAO.RegisterUserInfoDAO;
+import com.tripapplication.DAOImpl.RegisterCredentialImpl;
+import com.tripapplication.DAOImpl.RegisterUserInfoDAOImpl;
 
 
 
 
-@Controller
-public class RegisterInfoController {
+		@Controller
+		public class RegisterInfoController {
 		 
 			@RequestMapping("/registerInfo")
 			
@@ -29,20 +29,14 @@ public class RegisterInfoController {
 			
 			// adding user info to the database.
 			Long userIdNum = registerUserInfoDAOImpl.add(userRegisterInformation);
-				
-				
 				ModelAndView modelandview = new ModelAndView("RegisterCredential");
 				modelandview.addObject("userIdNum", userIdNum);
-				System.out.println("step: Login page controller is called");
-				
-				
-				
-				
+							
 				return modelandview;
 			}
 			
-			@RequestMapping("/registerCredential")
-			public ModelAndView registerUsercredential(@ModelAttribute("userCredentialInformation") RegisterCredentialDAO userCredentialInformation) {
+		@RequestMapping("/registerCredential")
+		public ModelAndView registerUsercredential(@ModelAttribute("userCredentialInformation") RegisterCredentialDAO userCredentialInformation) {
 				 
 				ModelAndView modelandview = new ModelAndView("RegisterSuccessPage");
 				RegisterCredentialImpl tripApplicationCredentialImpl = new RegisterCredentialImpl();
@@ -51,9 +45,6 @@ public class RegisterInfoController {
 				
 				modelandview.addObject("welcomeMessage", "using object we are setting this message to the welcomemessage object that can be used in jsp");
 				System.out.println("step: Login page controller is called");
-				
-				
-				
 				
 				return modelandview;
 			}

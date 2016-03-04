@@ -1,4 +1,4 @@
-package com.tripapplication.RegisterDAO;
+package com.tripapplication.DAO;
 
 import java.sql.Timestamp;
 import java.util.Date;
@@ -7,7 +7,7 @@ public class RegisterUserInfoDAO {
 	 private String firstName; 
 	 private String lastName; 
 	 private String middleName;
-	 private Date   dateofBirth;
+	 private Date dateofBirth;
 	 private String emailAddress;
 	 private String phoneNumber;
 	 private String houseNumber;
@@ -54,8 +54,8 @@ public class RegisterUserInfoDAO {
 	public void setMiddleName(String middleName) {
 		this.middleName = middleName;
 	}
-	public Timestamp getDateofBirth() {
-		return (Timestamp) dateofBirth;
+	public java.sql.Date getDateofBirth() {
+		return (java.sql.Date) dateofBirth;
 	}
 	public void setDateofBirth(Date dateofBirth) {
 		this.dateofBirth = dateofBirth;

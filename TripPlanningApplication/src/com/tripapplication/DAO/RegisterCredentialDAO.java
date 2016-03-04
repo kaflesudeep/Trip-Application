@@ -1,4 +1,4 @@
-package com.tripapplication.RegisterDAO;
+package com.tripapplication.DAO;
 
 public class RegisterCredentialDAO {
 	private Long userIdNumber; 

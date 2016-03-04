@@ -1,8 +1,8 @@
-package com.tripapplication.RegisterDAOImpl;
+package com.tripapplication.DAOImpl;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
-import com.tripapplication.RegisterDAO.RegisterUserInfoDAO;
+import com.tripapplication.DAO.RegisterUserInfoDAO;
 import com.tripapplication.SpecialClass.CurrentTime;
 
 import java.sql.DriverManager;
@@ -36,7 +36,7 @@ public class RegisterUserInfoDAOImpl {
 		preparedStatement.setString(2, UserInforamtion.getFirstName());
 		preparedStatement.setString(3, UserInforamtion.getMiddleName());
 		preparedStatement.setString(4, UserInforamtion.getLastName());
-		preparedStatement.setTimestamp(5, UserInforamtion.getDateofBirth());
+		preparedStatement.setDate(5, UserInforamtion.getDateofBirth());
 		preparedStatement.setString(6, UserInforamtion.getEmailAddress());
 		preparedStatement.setString(7, UserInforamtion.getPhoneNumber());
 		preparedStatement.setString(8, UserInforamtion.getAddress());

@@ -1,9 +1,9 @@
-package com.tripapplication.RegisterDAOImpl;
+package com.tripapplication.DAOImpl;
 
-	import com.tripapplication.RegisterDAO.RegisterCredentialDAO;
+	import com.tripapplication.DAO.RegisterCredentialDAO;
+import com.tripapplication.DAO.RegisterUserInfoDAO;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
-import com.tripapplication.RegisterDAO.RegisterUserInfoDAO;
 import com.tripapplication.SpecialClass.CurrentTime;
 
 	import java.sql.DriverManager;
@@ -44,8 +44,6 @@ import java.text.SimpleDateFormat;
 			CurrentTime currenttime = new CurrentTime();
 			preparedStatement.setTimestamp(8, currenttime.getCurrentTimeStamp());
 			preparedStatement .executeUpdate();
-			System.out.println("Credential Data inserted to the database");
-			
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -53,7 +51,7 @@ import java.text.SimpleDateFormat;
 				try {
 					connDatabase.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
+					System.out.println("INSERT INTO tripapplicationcredentialtable error");// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
