@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-thus is from usha
+thus is from Usha
 </body>
 </html>
