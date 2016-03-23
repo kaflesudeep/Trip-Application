@@ -78,3 +78,6 @@ outline:none;
 input[type=button]:hover{
 background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
 }
+.class{
+	color:green;
+}

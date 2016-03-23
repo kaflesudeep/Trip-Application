@@ -57,4 +57,13 @@ import com.tripapplication.DAOImpl.RegisterUserInfoDAOImpl;
 				return modelandview2;
 		
 	}
+			@RequestMapping("/distance")
+			public ModelAndView helloworld1() {
+					 
+				ModelAndView modelandview = new ModelAndView("Distance");
+				modelandview.addObject("welcomeMessage", "using object we are setting this message to the welcomemessage object that can be used in jsp");
+				
+				return modelandview;
+			}
+			
 	}
