@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Trip Planner WebSite: Login Page</title>
 
-this is login jsp. 
+
 <!-- css need to be coded in external layout.css file -->
 <!-- Antony -->
 <!-- sudeep -->
