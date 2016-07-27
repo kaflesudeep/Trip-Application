@@ -1,24 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
 
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
+<spring:url value="/resources/theme1/css/style.css" var="main" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link href="${main}" rel="stylesheet" />
 
 
-
-<link rel="stylesheet" type="text/css" href="css/try.css">
-<script type="text/javascript" src="js/time.js"></script>
 
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
-<!-- css related  -->
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+
+<!-- to implement calander this must be implemented properly  <script type="text/javascript" src="js/time.js"></script> -->
+<!-- need to implement css file " first_jsp.css" -->
+
+<%-- <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/globalCSS.css" /> --%>
+
 
 
 
@@ -44,7 +50,7 @@ $(function() {
 
 </script>
 
-<!-- css need to be coded in external layout.css file -->
+
 
 <style type="text/css">
 .form-style-10{
@@ -169,20 +175,12 @@ $(function() {
 </style>
 
 
-// need to implement JS and css file for formating the page. 
-<%-- <link href="<c:url value="/Resources/CSS/style.css" rel="stylesheet"   type="text/css" /> --%>
- 
-<!--  <link rel="stylesheet" href="/Resources/CSS/style.css" /> -->
-   
-
-
-
 </head>
 
 <body>
  
 <div class="form-style-10">
-<h2>Login In!<span>Plan Your Perfect Trip Using this Site!</span></h2>
+<h1>Login In!<span>Plan Your Perfect Trip Using this Site!</span></h1>
 
  
 
