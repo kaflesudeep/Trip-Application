@@ -6,7 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Trip Planner WebSite: Login Page</title>
 
-
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <!-- css need to be coded in external layout.css file -->
 
 <style type="text/css">
@@ -147,6 +148,17 @@
  
 <!--  <link rel="stylesheet" href="/Resources/CSS/style.css" /> -->
    
+
+
+<script src="jquery.js" type="text/javascript"></script>  
+<script type="text/javascript"> 
+
+
+// jquery function 
+
+</script>
+
+
 </head>
 <body>
 <div class="form-style-10">
@@ -164,15 +176,17 @@ if(error!=null && error.toLowerCase().trim()=="faliure" ) {%>
 %>
 
 
-
+<div id="div"> </div>
 <div class="section">
+
+
 <!-- <form  method="post" action="distance"> -->
 <form  method="post" action="loginUser">
 <label>User Name :</label>
 <input type="text" name="username" id="username"/>
 <label>Password :</label>
 <input type="password" name="password" id="password"/>
-<input type="submit" value="loginUser" />
+<input type="submit" id="submit" value="loginUser" />
 </form>
 </div>
 
@@ -182,7 +196,7 @@ if(error!=null && error.toLowerCase().trim()=="faliure" ) {%>
 <input type="submit" value="registerUser" />
 
 <span class="privacy-policy">
-     <input type="checkbox" name="field7">You agree to our Terms and Policy. 
+     <input type="checkbox" id = "check" name="field7">You agree to our Terms and Policy. 
      </span>
 </form>
 </div>
