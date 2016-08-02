@@ -6,10 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Trip Planner WebSite: Login Page</title>
 
-<!-- Antony -->
+
 <!-- css need to be coded in external layout.css file -->
-<!-- Antony -->
-<!-- sudeep -->
+
 <style type="text/css">
 .form-style-10{
     width:450px;
@@ -129,22 +128,41 @@
     color: #4D4D4D;
     margin-top: 10px;
     text-align: right;
+    
+}
+
+#errormessage{
+	font: 17px Arial, Helvetica, sans-serif;
+	color: #ff0000;
+	background: #ffffcc;
+	padding: 8px 20px 8px 20px;
+    border-radius: 5px;
+
 }
 </style>
 
 
-// need to implement JS and css file for formating the page. 
+
 <%-- <link href="<c:url value="/Resources/CSS/style.css" rel="stylesheet"   type="text/css" /> --%>
  
 <!--  <link rel="stylesheet" href="/Resources/CSS/style.css" /> -->
    
-
-
-
 </head>
 <body>
 <div class="form-style-10">
 <h1>Login In!<span>Plan Your Perfect Trip Using this Site!</span></h1>
+
+
+
+<% 
+String error = (String)request.getAttribute("StateMessage");
+if(error!=null && error.toLowerCase().trim()=="faliure" ) {%>
+
+   <div id="errormessage"> Please enter a correct Username or Password.  </div> 
+<%
+    }
+%>
+
 
 
 <div class="section">

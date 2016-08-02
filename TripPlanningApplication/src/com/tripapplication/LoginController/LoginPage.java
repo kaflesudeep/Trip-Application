@@ -1,7 +1,9 @@
 package com.tripapplication.LoginController;
 
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,12 +19,12 @@ import com.tripapplication.DAOImpl.RegisterUserInfoDAOImpl;
 
 
 	@Controller
-	public class LoginPage {
+	public class LoginPage extends HttpServlet {
 	 
 		@RequestMapping("/welcome")
 		public ModelAndView helloworld() {
 				 
-			ModelAndView modelandview = new ModelAndView("LoginPage");
+			ModelAndView modelandview = new ModelAndView("LoginPage"); // jsp name without .jsp
 			modelandview.addObject("welcomeMessage", "using object we are setting this message to the welcomemessage object that can be used in jsp");
 			
 			return modelandview;
@@ -35,12 +37,17 @@ import com.tripapplication.DAOImpl.RegisterUserInfoDAOImpl;
 			boolean userAccount= true; 
 			LoginPageDAOImpl loginPageDAOImpl = new LoginPageDAOImpl(); 
 			userAccount = loginPageDAOImpl.ValidateCredential(userCredentialInformation); 
+		
+		
+			
 			if (userAccount== true ){
 				view = 	"TripInfoFirst";
 				StateMessage = "Success"; 
 			}else{
 				view = 	"LoginPage"; 
 				StateMessage = "faliure";
+				
+		         
 			}
 			
 			ModelAndView modelandview2 = new ModelAndView(view);
