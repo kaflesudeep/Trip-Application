@@ -174,7 +174,22 @@ $(function() {
 }
 </style>
 
+<script src="jquery.js" type="text/javascript"></script>  
+ <script type="text/javascript"> 
 
+
+$(document).ready(function() {
+	$("<span>*</span>").insertAfter(".required").css({
+		color: 'red'
+	});
+	
+// 	$(".required").append("<span>*</span>").css({
+// 		color: 'red'
+// 	});
+
+});
+</script>
+</script>
 </head>
 
 <body>
@@ -194,8 +209,8 @@ $(function() {
 
 	<table   width="75%">
  		<tr> 
-			<td><label id="label"> First Name: </label> </td>
-			<td><input id="inputfield" type="text" name= "firstName" > </td>
+			<td><label id="label" class="required"> First Name:  </label> </td>
+			<td><input id="inputfield"  type="text" name= "firstName" > </td>
 		
 		
 		
@@ -208,15 +223,15 @@ $(function() {
 		</tr>
 		
 		<tr> 
-			<td><label id="label" > Last Name: </label> </td>
+			<td><label id="label" class="required" > Last Name: </label> </td>
 			<td><input type="text" name= "lastName" >   </td>
 		</tr>
 	
 <!-- 		id="datepicker" -->
 		
 		<tr> 
-			<td><label id="label"> Date of Birth: </label> </td>
-			<td><input type="text" name= "dateofBirth" id="datepicker">   </td>
+			<td><label id="label" class="required"> Date of Birth: </label> </td>
+			<td><input type="text" name= "dateofBirth" id="datepicker" >   </td>
 		</tr>
 </table>
 
@@ -228,12 +243,12 @@ $(function() {
 <table width="75%">		
 				
 		<tr> 
-			<td><label id="label"> Email Address: </label> </td>
-			<td><input type="text" name= "emailAddress" >   </td>
+			<td><label id="label" class="required"> Email Address: </label> </td>
+			<td><input type="text" name= "emailAddress"  >   </td>
 		</tr>
 		<tr> 
-			<td><label id="label"> Phone Number: </label> </td>
-			<td><input type="text" name= "phoneNumber" >  </td>
+			<td><label id="label" class="required"> Phone Number: </label> </td>
+			<td><input type="text" name= "phoneNumber"  >  </td>
 		</tr>
 		<tr> 
 
@@ -245,36 +260,36 @@ $(function() {
 <div class="section"><span>3</span>Mailing Address</div>
     <div class="inner-wrap">
 <table width="75%">
-			<td><label id="label"> House Number: </label> </td>
-			<td><input type="text" name= "houseNumber" >   </td>
+			<td><label id="label" class="required"> House Number: </label> </td>
+			<td><input type="text" name= "houseNumber"  >   </td>
 		</tr>
 		
 		<tr> 
-			<td><label id="label"> St. Add Line 1: </label> </td>
-			<td><input type="text" name= "streetAddressLine1" >  </td>
+			<td><label id="label" class="required"> St. Add Line 1: </label> </td>
+			<td><input type="text" name= "streetAddressLine1"  >  </td>
 		</tr>
 		<tr> 
-			<td><label id="label"> St. Add Line 2: </label> </td>
-			<td><input type="text" name= "streetAddressLine2" >    </td>
+			<td><label id="label" class="required"> St. Add Line 2: </label> </td>
+			<td><input type="text" name= "streetAddressLine2"  >    </td>
 		</tr>
 		
 		<tr> 
-			<td><label id="label"> City: </label> </td>
-			<td><input type="text" name= "cityName" >     </td>
+			<td><label id="label" class="required"> City: </label> </td>
+			<td><input type="text" name= "cityName"   >     </td>
 		</tr>
 		<tr>
 		
 		<tr> 
-			<td><label id="label"> State Name: </label> </td>
-			<td><input type="text" name= "stateName" >     </td>
+			<td><label id="label" class="required"> State Name: </label> </td>
+			<td><input type="text" name= "stateName"   >     </td>
 		</tr>
 		<tr> 
-			<td><label id="label"> Zip Code: </label> </td>
-			<td><input type="text" name= "zipCode" >    </td>
+			<td><label id="label" class="required"> Zip Code: </label> </td>
+			<td><input type="text" name= "zipCode"  >    </td>
 		</tr>
 		<tr> 
-			<td><label id="label"> Country: </label> </td>
-			<td><input type="text" name= "countryName" >    </td>
+			<td><label id="label" class="required"> Country: </label> </td>
+			<td><input type="text" name= "countryName"   >    </td>
 		</tr>
 		
 		
@@ -286,7 +301,7 @@ $(function() {
 </div>
 
  <div class="button-section">
-	<input type="submit" value="Next" />	
+	<input type="submit" id = "submit_button" value="Next" />	
 	</form>
 </div>
 </div>

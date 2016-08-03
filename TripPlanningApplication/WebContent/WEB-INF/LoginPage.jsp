@@ -171,9 +171,11 @@ String error = (String)request.getAttribute("StateMessage");
 if(error!=null && error.toLowerCase().trim()=="faliure" ) {%>
 
    <div id="errormessage"> Please enter a correct Username or Password.  </div> 
+   erro=null; 
 <%
-    }
+ }
 %>
+
 
 
 <div id="div"> </div>

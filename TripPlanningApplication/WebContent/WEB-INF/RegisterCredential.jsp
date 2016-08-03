@@ -185,7 +185,12 @@
                       $(".status").html("<font color=red>Username should be <b>3</b> character long.</font>");  
                   }  
                     
-              });  
+              });
+              
+              $("<span>*</span>").insertAfter(".required").css({
+          		color: 'red'
+          	}); 
+              
           });  
         </script>  
         
@@ -211,16 +216,16 @@ Your Account Id is : ${userIdNum}
 <table>
 
 <tr> 
-			<td><label id="label"> Please Choose c Your User Name: </label> </td>
+			<td><label id="label" class="required"> Please Choose c Your User Name: </label> </td>
 			<td><input type="text" name= "userId" class="uname" > <span class="status"></span>  </td>
 		</tr>
 		
 		<tr> 
-			<td><label id="label"> Please Enter Your Password: </label> </td>
+			<td><label id="label" class="required"> Please Enter Your Password: </label> </td>
 			<td><input type="text" name= "userPassword" >   </td>
 		</tr>
 		<tr> 
-			<td><label id="label"> Please re enter your Password: </label> </td>
+			<td><label id="label" class="required"> Please re enter your Password: </label> </td>
 			<td><input type="text" name= "rePassword" >  </td>
 		</tr>
 		
@@ -234,14 +239,14 @@ Your Account Id is : ${userIdNum}
 <table width="75%">	
 
 <tr> 
-			<td><label id="label" name = "securityQuestion1"> securityQuestion1  </label> </td>
+			<td><label id="label" name = "securityQuestion1" class="required"> securityQuestion1  </label> </td>
 			<td><input type="text" name= "securityAnswer1" >   </td>
 		
 		
 		</tr>
 
 <tr>
-<td><label id="label" name= "securityQuestion2"> securityQuestion2  </label> </td>
+<td><label id="label" name= "securityQuestion2" class="required"> securityQuestion2  </label> </td>
 			<td><input type="text" name= "securityAnswer2" >   </td>
 		
 	
