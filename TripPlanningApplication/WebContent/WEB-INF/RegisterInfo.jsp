@@ -33,7 +33,7 @@
 
 <div>
 	<form method="post" action="registerInfo" >
-		<h1> Welcome to the .... Site </h1>
+		<h2> Welcome to the .... Site </h2>
 
 
 <div class="section"><span>1</span> Name &amp; Date of Birth</div>

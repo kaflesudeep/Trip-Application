@@ -30,7 +30,7 @@
 <body>
 
 <div class="form-style-10">
-<h2>Login In!<span>Plan Your Perfect Trip  Using this Site! First Name: ${userRegisterInformation.firstName}</span></h2>
+<h1>Login In!<span>Plan Your Perfect Trip  Using this Site! First Name: ${userRegisterInformation.firstName}</span></h1>
 
 Your Account Id is : ${userIdNum}
  Welcome to Easy Trip : ${userRegisterInformation.firstName}<br>
