@@ -5,6 +5,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<style><%@ include file="/resources/css/main.css"%>
+		<%@ include file="/resources/css/screen_reader.css"%>
+</style>
+
+
+<script><%@ include file="/resources/css/login.js"%>
+        <%@ include file="/resources/css/validate.js"%>
+ </script>
+ 
+ 
+
 </head>
 <body>
 

@@ -8,21 +8,15 @@
 
 
 
-<style>
-     <%@ include file="/resources/css/main.css"%>
-</style>
-
-<!-- jquery needs to be coded in external file -->
-
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script src="jquery.js" type="text/javascript"></script>  
-<script type="text/javascript"> 
+
+<style><%@ include file="/resources/css/main.css"%>
+		<%@ include file="/resources/css/screen_reader.css"%>
+</style>
 
 
-// jquery function 
-
-</script>
+<script><%@ include file="/resources/css/login.js"%></script>
 
 
 </head>
@@ -30,6 +24,7 @@
 <div class="form-style-10">
 <h1>Login In!<span>Plan Your Perfect Trip Using this Site!</span></h1>
 
+<p class="test" aria-hidden="true"> this is the test for the screen reader css file</p>
 
 
 <% 

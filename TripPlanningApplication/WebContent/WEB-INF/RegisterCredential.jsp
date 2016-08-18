@@ -9,57 +9,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
+
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<!-- css related  -->
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
-
-<style>
-     <%@ include file="/resources/css/main.css"%>
+<style><%@ include file="/resources/css/main.css"%>
+		<%@ include file="/resources/css/screen_reader.css"%>
 </style>
 
-<!-- Jquery Code to check if the user credential is available or not, used ajax to check -->
-<!-- modified : CheckAvialibility.java, Web.xml -->
 
-<script src="jquery.js" type="text/javascript"></script>  
- <script type="text/javascript">  
-          $(document).ready(function(){  
-              $(".uname").change(function(){  
-                  var uname = $(this).val();  
-                  if(uname.length >= 3){  
-                      //$(".status").html("<img src='images/loading.gif'><font color=gray> Checking availability...</font>");  
+<script><%@ include file="/resources/css/login.js"%>
+        <%@ include file="/resources/css/validate.js"%>
+ </script>
 
-                	  $(".status").html("<font color=gray> Checking availability...</font>");  
-                       $.ajax({  
-                          type: "POST",  
-                          url: "check",  
-                          data: "uname="+ uname,  
-                          success: function(msg){  
-                        	  
-                        	  $(".status").html(msg);
-                          
-//                               $(".status").ajaxComplete(function(event, request, settings){  
-                                     
-//                                   $(".status").html(msg);  
-  
-//                               });  
-                          }  
-                      });   
-                  }  
-                  else{  
-                         
-                      $(".status").html("<font color=red>Username should be <b>3</b> character long.</font>");  
-                  }  
-                    
-              });
-              
-              $("<span>*</span>").insertAfter(".required").css({
-          		color: 'red'
-          	}); 
-              
-          });  
-        </script>  
+
+
         
         
 </head>

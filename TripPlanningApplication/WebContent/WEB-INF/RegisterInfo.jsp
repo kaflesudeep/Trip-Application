@@ -1,71 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
-<spring:url value="/resources/theme1/css/style.css" var="main" />
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<link href="${main}" rel="stylesheet" />
-
-
 
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
-
-<style>
-     <%@ include file="/resources/css/main.css"%>
+<style><%@ include file="/resources/css/main.css"%>
+		<%@ include file="/resources/css/screen_reader.css"%>
 </style>
 
 
-
-<!-- need to include this jQuery/javascript into new external file name time.js -->
-<script type="text/javascript">
-$(function() {
-	$("#datepicker").datepicker({
-	   //showOn: both - datepicker will appear clicking the input box as well as the calendar icon
-	   //showOn: button - datepicker will appear only on clicking the calendar icon
-	   showOn: 'button',
-	   //you can use your local path also eg. buttonImage: 'images/x_office_calendar.png'
-	   buttonImage: 'http://theonlytutorials.com/demo/x_office_calendar.png',
-	   buttonImageOnly: true,
-	   changeMonth: true,
-	   changeYear: true,
-	   showAnim: 'slideDown',
-	   duration: 'fast',
-	   dateFormat: 'dd-mm-yy'
-	
-	});
-});
-
-</script>
+<script><%@ include file="/resources/css/login.js"%></script>
 
 
 
-
-
-<script src="jquery.js" type="text/javascript"></script>  
- <script type="text/javascript"> 
-
-
-$(document).ready(function() {
-	$("<span>*</span>").insertAfter(".required").css({
-		color: 'red'
-	});
-	
-// 	$(".required").append("<span>*</span>").css({
-// 		color: 'red'
-// 	});
-
-});
-</script>
-</script>
 </head>
 
 <body>
