@@ -16,7 +16,34 @@
 </style>
 
 
-<script><%@ include file="/resources/css/login.js"%></script>
+<script><%@ include file="/resources/css/login.js"%>
+<%@ include file="/resources/css/validate.js"%>
+<%@ include file="/resources/css/commonFunction.js"%>
+
+</script>
+
+<script>
+
+
+function checkBokChecked(){
+	$("#submit, #submit1").removeAttr('disabled');
+		if($(this).is(":checked")){
+       		$("#submit, #submit1").removeAttr('disabled').css({'background':'#2A88AD'});
+         }
+    else if($(this).is(":not(:checked)")){
+        	$("#submit, #submit1").attr('disabled', 'true').css({'background':'#c9ccce'});
+       
+    }
+}; 
+
+$(document).ready(function(){
+	$("#submit,#submit1").attr('disabled', 'true');
+    $('input[id="check_id"]').on("click", checkBokChecked );
+    $('#username, #password' ).on("keyup", removeErrorMessage );
+});
+
+</script>
+
 
 
 </head>
@@ -37,7 +64,7 @@ if(error!=null && error.toLowerCase().trim()=="faliure" ) {%>
  }
 %>
 
-
+#c9ccce
 
 <div id="div"> </div>
 <div class="section">
@@ -46,21 +73,25 @@ if(error!=null && error.toLowerCase().trim()=="faliure" ) {%>
 <!-- <form  method="post" action="distance"> -->
 <form  method="post" action="loginUser">
 <label>User Name :</label>
-<input type="text" name="username" id="username"/>
+<input type="text" name="username" class="usernameC"  id="username"/> <span class="status"></span>
 <label>Password :</label>
-<input type="password" name="password" id="password"/>
-<input type="submit" id="submit" value="loginUser" />
+<input type="password" name="password"  class="passwordC" id="password"/>
+<br>
+    <span class="privacy-policy">
+     <input type="checkbox" id = "check_id" name="field7" >You agree to our Terms and Policy. 
+     </span>
+     
+  <br>   
+<input type="submit" id="submit" class ="disabled" value="loginUser" />
 </form>
 </div>
 
 
 <div class="button-section">
 <form  method="post" action="registerUser">
-<input type="submit" value="registerUser" />
+<input type="submit" id="submit1" class= "disabled" value="registerUser" />
 
-<span class="privacy-policy">
-     <input type="checkbox" id = "check" name="field7">You agree to our Terms and Policy. 
-     </span>
+
 </form>
 </div>
 

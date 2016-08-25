@@ -23,17 +23,28 @@
   
   <servlet>  
         <servlet-name>check</servlet-name>  
-        <servlet-class>com.tripapplication.Servelet.CheckAvailability</servlet-class>  
-    </servlet>  
+        <servlet-class>com.tripapplication.Servelet.CheckAvailability</servlet-class> 
+       
+         
+    </servlet> 
+    <servlet>  
+        <servlet-name>checkCre</servlet-name>  
+        <servlet-class>com.tripapplication.Servelet.CheckCredentials</servlet-class> 
+      </servlet>  
     <servlet-mapping>  
         <servlet-name>check</servlet-name>  
         <url-pattern>/check</url-pattern>  
     </servlet-mapping>  
+    <servlet-mapping>  
+        <servlet-name>checkCre</servlet-name>  
+        <url-pattern>/checkCre</url-pattern>  
+    </servlet-mapping> 
     <session-config>  
         <session-timeout>  
             30  
         </session-timeout>  
     </session-config>  
+  
     <welcome-file-list>  
         <welcome-file>index.jsp</welcome-file>  
         </welcome-file-list>  
