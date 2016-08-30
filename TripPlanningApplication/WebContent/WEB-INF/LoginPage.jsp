@@ -26,7 +26,7 @@
 
 
 function checkBokChecked(){
-	$("#submit, #submit1").removeAttr('disabled');
+	$("#submit, #submit1").removeAttr('disabled').css({'background':'#2A88AD'});
 		if($(this).is(":checked")){
        		$("#submit, #submit1").removeAttr('disabled').css({'background':'#2A88AD'});
          }
@@ -37,6 +37,7 @@ function checkBokChecked(){
 }; 
 
 $(document).ready(function(){
+	$("#submit, #submit1").css({'background':'#c9ccce'});
 	$("#submit,#submit1").attr('disabled', 'true');
     $('input[id="check_id"]').on("click", checkBokChecked );
     $('#username, #password' ).on("keyup", removeErrorMessage );
@@ -64,7 +65,7 @@ if(error!=null && error.toLowerCase().trim()=="faliure" ) {%>
  }
 %>
 
-#c9ccce
+
 
 <div id="div"> </div>
 <div class="section">

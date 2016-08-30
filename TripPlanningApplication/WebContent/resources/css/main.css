@@ -82,7 +82,7 @@
 .form-style-10 input[type="submit"]{
    
     padding: 8px 20px 8px 20px;
-   background: #c9ccce;
+   background: #2A88AD;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     color: #fff;
@@ -96,7 +96,7 @@
 }
 .form-style-10 input[type="button"]:hover, 
 .form-style-10 input[type="submit"]:hover{
-    background: #2A6881;
+    
     -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);

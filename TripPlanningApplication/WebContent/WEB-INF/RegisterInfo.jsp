@@ -18,14 +18,28 @@
 </style>
 
 
-<script><%@ include file="/resources/css/login.js"%></script>
+<script><%@ include file="/resources/css/login.js"%>
+<%@ include file="/resources/css/validateRegisterInfo.js"%></script>
 
-
-
+<script>
+$(document).ready(function(){
+	$('form').submit(function () {
+	    var error_field= validateAll_RegisterInfo(); 
+         // Check if there are error fielsd of not
+	    if (error_field.toLowerCase()  ===  "true") {
+	   
+	        return false;
+	    }
+	});
+	// remove validation if the any text is entered.
+	$("input").on("keypress", removevalidation); 
+	
+}); 
+</script>
 </head>
 
 <body>
- 
+
 <div class="form-style-10">
 <h1>Login In!<span>Plan Your Perfect Trip Using this Site!</span></h1>
 
@@ -34,7 +48,7 @@
 <div>
 	<form method="post" action="registerInfo" >
 		<h2> Welcome to the .... Site </h2>
-
+        <span id="GlobalError" > </span>
 
 <div class="section"><span>1</span> Name &amp; Date of Birth</div>
     <div class="inner-wrap">
@@ -42,11 +56,8 @@
 	<table   width="75%">
  		<tr> 
 			<td><label id="label" class="required"> First Name:  </label> </td>
-			<td><input id="inputfield"  type="text" name= "firstName" > </td>
-		
-		
-		
-		
+			<td><input id="firstName" type="text" name= "firstName" > </td>
+			
 		</tr>
 		
 		<tr> 
@@ -56,7 +67,7 @@
 		
 		<tr> 
 			<td><label id="label" class="required" > Last Name: </label> </td>
-			<td><input type="text" name= "lastName" >   </td>
+			<td><input type="text" name= "lastName"  id ="lastName">   </td>
 		</tr>
 	
 <!-- 		id="datepicker" -->
@@ -76,11 +87,11 @@
 				
 		<tr> 
 			<td><label id="label" class="required"> Email Address: </label> </td>
-			<td><input type="text" name= "emailAddress"  >   </td>
+			<td><input type="text" name= "emailAddress" id="emailAddress" >   </td>
 		</tr>
 		<tr> 
 			<td><label id="label" class="required"> Phone Number: </label> </td>
-			<td><input type="text" name= "phoneNumber"  >  </td>
+			<td><input type="text" name= "phoneNumber" id="phoneNumber" >  </td>
 		</tr>
 		<tr> 
 
@@ -93,35 +104,35 @@
     <div class="inner-wrap">
 <table width="75%">
 			<td><label id="label" class="required"> House Number: </label> </td>
-			<td><input type="text" name= "houseNumber"  >   </td>
+			<td><input type="text" name= "houseNumber" id="houseNumber" >   </td>
 		</tr>
 		
 		<tr> 
 			<td><label id="label" class="required"> St. Add Line 1: </label> </td>
-			<td><input type="text" name= "streetAddressLine1"  >  </td>
+			<td><input type="text" name= "streetAddressLine1" id="streetAddressLine1" >  </td>
 		</tr>
 		<tr> 
-			<td><label id="label" class="required"> St. Add Line 2: </label> </td>
+			<td><label id="label" > St. Add Line 2: </label> </td>
 			<td><input type="text" name= "streetAddressLine2"  >    </td>
 		</tr>
 		
 		<tr> 
 			<td><label id="label" class="required"> City: </label> </td>
-			<td><input type="text" name= "cityName"   >     </td>
+			<td><input type="text" name= "cityName" id="cityName"  >     </td>
 		</tr>
 		<tr>
 		
 		<tr> 
 			<td><label id="label" class="required"> State Name: </label> </td>
-			<td><input type="text" name= "stateName"   >     </td>
+			<td><input type="text" name= "stateName" id="stateName"  >     </td>
 		</tr>
 		<tr> 
 			<td><label id="label" class="required"> Zip Code: </label> </td>
-			<td><input type="text" name= "zipCode"  >    </td>
+			<td><input type="text" name= "zipCode" id="zipCode" >    </td>
 		</tr>
 		<tr> 
 			<td><label id="label" class="required"> Country: </label> </td>
-			<td><input type="text" name= "countryName"   >    </td>
+			<td><input type="text" name= "countryName"  id="countryName" >    </td>
 		</tr>
 		
 		
