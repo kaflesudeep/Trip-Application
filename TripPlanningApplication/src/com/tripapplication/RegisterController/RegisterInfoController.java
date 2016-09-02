@@ -27,6 +27,8 @@ import com.tripapplication.DAOImpl.RegisterUserInfoDAOImpl;
 				// if we need to add this to the database at this point else we need to pass to the session. 
 			RegisterUserInfoDAOImpl registerUserInfoDAOImpl = new RegisterUserInfoDAOImpl();
 			
+			System.out.println(userRegisterInformation.getDateofBirth()); 
+			
 			// adding user info to the database.
 			Long userIdNum = registerUserInfoDAOImpl.add(userRegisterInformation);
 				ModelAndView modelandview = new ModelAndView("RegisterCredential");

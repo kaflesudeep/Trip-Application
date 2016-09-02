@@ -1,7 +1,5 @@
 function validateAll_RegisterInfo(){
- 
-	
-	removevalidationall();
+ 	removevalidationall();
 	var error_field=""; 
 	var fname= $("#firstName").val();
 	var lname= $("#lastName").val();
@@ -32,16 +30,12 @@ if (!fname.match(name_regex) || fname.length == 0) {
      $("#firstName").parent().append("<td id='error'>Please enter your valid first name.</td>").css({'color':'red'});
      error_field="true"; 
 	}
- 
- 
- 
+  
 if (!lname.match(name_regex) || lname.length == 0) {
      $("#lastName").css({"border":"1px solid red", "background-color":"#ffb3b3"});
      $("#lastName").parent().append("<td id='error'>Please enter your valid last name.</td>").css({'color':'red'});
      error_field="true";
     }
- 
- 
  
 var now = new Date();
 var CurrentyearVar= now.getFullYear()*10000+(now.getMonth()+1)*100+now.getDate();
@@ -52,7 +46,8 @@ var age= Math.floor((CurrentyearVar-date)/(10000));
 if (date=="") {
      $("#datepicker").css({"border":"1px solid red", "background-color":"#ffb3b3"});
      $("#datepicker").parent().append("<td id='error'>Please enter the date of birth.</td>").css({'color':'red'});
-}else if (age<21) {
+// change it to 21
+}else if (age<0) {
      $("#datepicker").css({"border":"1px solid red", "background-color":"#ffb3b3"});
      $("#datepicker").parent().append("<td id='error'>Minimum age requirement is 21 years. </td>").css({'color':'red'});
 error_field="true";

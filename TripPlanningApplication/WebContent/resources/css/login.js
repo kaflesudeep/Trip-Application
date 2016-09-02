@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 	
 // for calender date picker id="datepicker"
-	$("#datepicker").datepicker({
+	$(".datepicker").datepicker({
 		   //showOn: both - datepicker will appear clicking the input box as well as the calendar icon
 		   //showOn: button - datepicker will appear only on clicking the calendar icon
 		   showOn: 'button',
@@ -17,7 +17,7 @@ $(document).ready(function() {
 		   changeYear: true,
 		   showAnim: 'slideDown',
 		   duration: 'fast',
-		   dateFormat: 'dd-mm-yy'
+		   dateFormat: 'dd-mm-yyyy'
 		});
 		
 	

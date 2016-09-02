@@ -16,13 +16,32 @@
 <style><%@ include file="/resources/css/main.css"%>
 		<%@ include file="/resources/css/screen_reader.css"%>
 </style>
-
+ 
+  
 
 <script><%@ include file="/resources/css/login.js"%>
-        <%@ include file="/resources/css/validate.js"%>
+        <%@ include file="/resources/css/validateRegisterCredential.js"%>
  </script>
 
+<script>
+$(document).ready(function(){
+	var error_password=""; 	
+	$('form').submit(function () {
+		var error_password= validate_username_password();
+	    
+         // Check if there are error fielsd of not
+	    if (error_password.toLowerCase()  ===  "true") {
+	   
+	        return false;
+	    }
+	});
+	
+	$(".uname").change(CheckAvailability);
+	$("#userPassword, #rePassword, #username").change(removevalidation); 
+	
+}); 
 
+</script>
 
         
         
@@ -45,19 +64,19 @@ Your Account Id is : ${userIdNum}
  
  
 <table>
-
+<!-- <span class="status"></span> -->
 <tr> 
 			<td><label id="label" class="required"> Please Choose c Your User Name: </label> </td>
-			<td><input type="text" name= "userId" class="uname" > <span class="status"></span>  </td>
+			<td><input type="text" name= "userId" class="uname" id="username" > <span class="status"></span>  </td>
 		</tr>
 		
-		<tr> 
+		<tr id="passw"> 
 			<td><label id="label" class="required"> Please Enter Your Password: </label> </td>
-			<td><input type="text" name= "userPassword" >   </td>
+			<td><input type="text" name= "userPassword" id="userPassword" >   </td>
 		</tr>
-		<tr> 
+		<tr id="passw"> 
 			<td><label id="label" class="required"> Please re enter your Password: </label> </td>
-			<td><input type="text" name= "rePassword" >  </td>
+			<td><input type="text" name= "rePassword" id="rePassword" >  </td>
 		</tr>
 		
 </table>
@@ -71,7 +90,7 @@ Your Account Id is : ${userIdNum}
 
 <tr> 
 			<td><label id="label" name = "securityQuestion1" class="required"> securityQuestion1  </label> </td>
-			<td><input type="text" name= "securityAnswer1" >   </td>
+			<td><input type="text" name= "securityAnswer1"  id="">   </td>
 		
 		
 		</tr>
@@ -100,7 +119,7 @@ Your Account Id is : ${userIdNum}
 
 </dir>
  
- <input type="submit" value="Register">
+ <input type="submit" id = "submit_button" value="Register">
   </form>
 <div>
 </body>

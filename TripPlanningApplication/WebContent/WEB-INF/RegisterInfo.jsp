@@ -43,7 +43,7 @@ $(document).ready(function(){
 <div class="form-style-10">
 <h1>Login In!<span>Plan Your Perfect Trip Using this Site!</span></h1>
 
- 
+
 
 <div>
 	<form method="post" action="registerInfo" >
@@ -56,7 +56,7 @@ $(document).ready(function(){
 	<table   width="75%">
  		<tr> 
 			<td><label id="label" class="required"> First Name:  </label> </td>
-			<td><input id="firstName" type="text" name= "firstName" > </td>
+			<td><input id="firstName" type="text" value= "Sudeep" name= "firstName" > </td>
 			
 		</tr>
 		
@@ -67,14 +67,14 @@ $(document).ready(function(){
 		
 		<tr> 
 			<td><label id="label" class="required" > Last Name: </label> </td>
-			<td><input type="text" name= "lastName"  id ="lastName">   </td>
+			<td><input type="text" name= "lastName" value= "kafle" id ="lastName">   </td>
 		</tr>
 	
 <!-- 		id="datepicker" -->
 		
 		<tr> 
 			<td><label id="label" class="required"> Date of Birth: </label> </td>
-			<td><input type="text" name= "dateofBirth" id="datepicker" >   </td>
+			<td><input type="text" name= "dateofBirth"  class="datepicker" id="dateofBirth" >   </td>
 		</tr>
 </table>
 
@@ -87,11 +87,11 @@ $(document).ready(function(){
 				
 		<tr> 
 			<td><label id="label" class="required"> Email Address: </label> </td>
-			<td><input type="text" name= "emailAddress" id="emailAddress" >   </td>
+			<td><input type="text" name= "emailAddress" value= "skk@gmail.com" id="emailAddress" >   </td>
 		</tr>
 		<tr> 
 			<td><label id="label" class="required"> Phone Number: </label> </td>
-			<td><input type="text" name= "phoneNumber" id="phoneNumber" >  </td>
+			<td><input type="text" name= "phoneNumber" value= "1234567890" id="phoneNumber" >  </td>
 		</tr>
 		<tr> 
 
@@ -104,12 +104,12 @@ $(document).ready(function(){
     <div class="inner-wrap">
 <table width="75%">
 			<td><label id="label" class="required"> House Number: </label> </td>
-			<td><input type="text" name= "houseNumber" id="houseNumber" >   </td>
+			<td><input type="text" name= "houseNumber" value= "1234"  id="houseNumber" >   </td>
 		</tr>
 		
 		<tr> 
 			<td><label id="label" class="required"> St. Add Line 1: </label> </td>
-			<td><input type="text" name= "streetAddressLine1" id="streetAddressLine1" >  </td>
+			<td><input type="text" name= "streetAddressLine1" value= "xxy" id="streetAddressLine1" >  </td>
 		</tr>
 		<tr> 
 			<td><label id="label" > St. Add Line 2: </label> </td>
@@ -118,21 +118,21 @@ $(document).ready(function(){
 		
 		<tr> 
 			<td><label id="label" class="required"> City: </label> </td>
-			<td><input type="text" name= "cityName" id="cityName"  >     </td>
+			<td><input type="text" name= "cityName" value= "Harrisburg" id="cityName"  >     </td>
 		</tr>
 		<tr>
 		
 		<tr> 
 			<td><label id="label" class="required"> State Name: </label> </td>
-			<td><input type="text" name= "stateName" id="stateName"  >     </td>
+			<td><input type="text" name= "stateName" value= "PA" id="stateName"  >     </td>
 		</tr>
 		<tr> 
 			<td><label id="label" class="required"> Zip Code: </label> </td>
-			<td><input type="text" name= "zipCode" id="zipCode" >    </td>
+			<td><input type="text" name= "zipCode" value= "12345" id="zipCode" >    </td>
 		</tr>
 		<tr> 
 			<td><label id="label" class="required"> Country: </label> </td>
-			<td><input type="text" name= "countryName"  id="countryName" >    </td>
+			<td><input type="text" name= "countryName"  value= "USA" id="countryName" >    </td>
 		</tr>
 		
 		
