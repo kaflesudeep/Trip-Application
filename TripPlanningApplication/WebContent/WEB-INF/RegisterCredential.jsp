@@ -86,29 +86,47 @@ Your Account Id is : ${userIdNum}
 
 <div class="section"><span>2</span>Security Questions</div>
     <div class="inner-wrap">
-<table width="75%">	
+  <table width="75%">	
 
-<tr> 
-			<td><label id="label" name = "securityQuestion1" class="required"> securityQuestion1  </label> </td>
-			<td><input type="text" name= "securityAnswer1"  id="">   </td>
-		
-		
-		</tr>
+    <tr>
+      <td><label id="label" class="required"> Choose your First Security Question </label> </td>
+		<td>
+		   <select id="label" name = "securityQuestion1">
+             <option value="What is your Mother's Middle Name?">What is your Mother's Middle Name?</option>
+             <option value="What is your first pet Name?">What is your first pet Name?</option>
+             <option value="What is your first Car Make?">What is your first Car Make?</option>
+             <option value="What is your Best Friend Name?">What is your Best Friend Name?</option>
+             <option value="Where were you born?">Where were you born?</option>
+             <option value="Where did you gratuated from?">Where did you gratuated from?</option>
+             <option value="What was your dream job?">What was your dream job?</option>
+          </select>
+       </td>
+     </tr>
+     <tr>
+        <td><label id="label" class="required">Answer</label> </td>
+	    <td><input type="text" name= "securityAnswer1"  id="">   </td>
+    </tr>
+
+    <tr>  
+       <td><label id="label" class="required"> Choose your Second Security Question </label> </td>
+	   <td>
+	      <select id="label" name = "securityQuestion2" class="required">
+            <option value="What is your Mother's Middle Name?">What is your Mother's Middle Name?</option>
+             <option value="What is your first pet Name?">What is your first pet Name?</option>
+             <option value="What is your first Car Make?">What is your first Car Make?</option>
+             <option value="What is your Best Friend Name?">What is your Best Friend Name?</option>
+             <option value="Where were you born?">Where were you born?</option>
+             <option value="Where did you gratuated from?">Where did you gratuated from?</option>
+             <optiotion value="What was your dream job?">What is your first pet Name?</option>
+           </select> </td>
+         </tr>
+         <tr>
+         <td><label id="label" class="required">Answer</label> </td>
+		 <td><input type="text" name= "securityAnswer2"  id="">   </td>
+    </tr>
+
 
 <tr>
-<td><label id="label" name= "securityQuestion2" class="required"> securityQuestion2  </label> </td>
-			<td><input type="text" name= "securityAnswer2" >   </td>
-		
-	
-
-</tr>
-
-<tr>
-
-<td><label id="label"> user Id:  </label> </td>
-			<td><input type="text" name= "userIdNumber"  value=${userIdNum}>   </td>
-		
-	
 
 </tr>
 
