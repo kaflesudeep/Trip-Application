@@ -14,11 +14,15 @@
 <script>
 $(document).ready(function(){
 	
-	 var modelAttributeValue = '${usernamepassword}';
-	 var modelAttributeValue = '${userId}';
-	 var modelAttributeValue = '${email}';
+	 var modelAttribute_userpassword = '${usernamepassword}';
+	 var modelAttributeValue_userid = '${userId}';
+	 var modelAttributeValue_email = '${email}';
 	 
-	$('#email').val("this is a question"); 
+	$('#usernamepassword').val(modelAttribute_userpassword); 
+	$('#userId').val(modelAttributeValue_userid); 
+	$('#email').val(modelAttributeValue_email); 
+	
+
 	
 });
 
@@ -34,13 +38,13 @@ $(document).ready(function(){
 
 
 
-email1 : ${usernamepassword}<br>
-email2 : ${userId}<br>
-email3 : ${email}<br>
+
 
  
-<input type="hidden" id="person" value='${usernamepassword}'>   
-<input type="text" name="email" id="email">
+
+<input type="hidden" name="usernamepassword" id="usernamepassword">
+<input type="hidden" name="userId" id="userId">
+<input type="hidden" name="email" id="email">
  
 <div class="section"><span>2</span>Security Questions</div>
     <div class="inner-wrap">

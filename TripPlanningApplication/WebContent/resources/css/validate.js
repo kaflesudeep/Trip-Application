@@ -39,3 +39,29 @@ function CheckCredentials(){
     }  
      
 }; 
+
+function emailvalidate(){
+	removevalidationall();
+	var email_regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+	
+	if (!emailA.match(email_regex) || emailA.length == 0) {
+	    $("#emailAddress").css({"border":"1px solid red", "background-color":"#ffb3b3"});
+	    $("#emailAddress").parent().append("<td id='error'>Please enter your valid email address.</td>").css({'color':'red'});
+	    error_field="true";
+	    }
+	return error_field;
+}
+
+
+
+function removevalidation (){
+	   $(this).closest("tr").find("#error").remove();
+	   $(this).closest("input").css({"border":"", "background-color":""});
+	 }
+	 
+	function removevalidationall (){
+		   $("#GlobalError").children("#error").remove();
+		   $("tr").find("#error").remove();
+		   $("*").css({"border":"", "background-color":""});	
+
+		 }
