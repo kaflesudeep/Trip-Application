@@ -1,77 +1,47 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-   <%@page import="java.text.SimpleDateFormat"%>
-   <%@page import="java.text.DateFormat"%>
-<%@page import="java.util.Date"%>
+    
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
-
-
 <script>
 $(document).ready(function(){
-	var error_password=""; 	
-	$('form').submit(function () {
-		var error_password= validate_username_password();
-	    
-         // Check if there are error fielsd of not
-	    if (error_password.toLowerCase()  ===  "true") {
-	   
-	        return false;
-	    }
-	});
 	
-	$(".uname").change(CheckAvailability);
-	$("#userPassword, #rePassword, #username").change(removevalidation); 
+	 var modelAttributeValue = '${usernamepassword}';
+	 var modelAttributeValue = '${userId}';
+	 var modelAttributeValue = '${email}';
+	 
+	$('#email').val("this is a question"); 
 	
-}); 
+});
 
 </script>
 
-        
-        
+
 </head>
 <body>
-
-<div class="form-style-10">
-<h1>Login In!<span>Plan Your Perfect Trip  Using this Site! First Name: ${userRegisterInformation.firstName}</span></h1>
-
-Your Account Id is : ${userIdNum}
- Welcome to Easy Trip : ${userRegisterInformation.firstName}<br>
+ take date of birth and question answer from the user
+<div class="button-section">
+<form  method="post" action="forgotCredential3">
+<input type="submit" id="submit1" class= "disabled" value="forgotCredential" />
 
 
-<div>
-<form method="Post" action="registerCredential">  
- <div class="section"><span>1</span>Credentials</div>
-    <div class="inner-wrap">
+
+email1 : ${usernamepassword}<br>
+email2 : ${userId}<br>
+email3 : ${email}<br>
+
  
+<input type="hidden" id="person" value='${usernamepassword}'>   
+<input type="text" name="email" id="email">
  
- 
- 
-<table>
-<!-- <span class="status"></span> -->
-<tr> 
-			<td><label id="label" class="required"> Please Choose c Your User Name: </label> </td>
-			<td><input type="text" name= "userId" class="uname" id="username" > <span class="status"></span>  </td>
-		</tr>
-		
-		<tr id="passw"> 
-			<td><label id="label" class="required"> Please Enter Your Password: </label> </td>
-			<td><input type="text" name= "userPassword" id="userPassword" >   </td>
-		</tr>
-		<tr id="passw"> 
-			<td><label id="label" class="required"> Please re enter your Password: </label> </td>
-			<td><input type="text" name= "rePassword" id="rePassword" >  </td>
-		</tr>
-		
-</table>
-</div>
-
-<div>
-
 <div class="section"><span>2</span>Security Questions</div>
     <div class="inner-wrap">
   <table width="75%">	
@@ -79,7 +49,7 @@ Your Account Id is : ${userIdNum}
     <tr>
       <td><label id="label" class="required"> Choose your First Security Question </label> </td>
 		<td>
-		   <select id="label" name = "securityQuestion1">
+		   <select id="label" name = "securityQuestion1" id="question1">
              <option value="What is your Mother's Middle Name?">What is your Mother's Middle Name?</option>
              <option value="What is your first pet Name?">What is your first pet Name?</option>
              <option value="What is your first Car Make?">What is your first Car Make?</option>
@@ -125,8 +95,10 @@ Your Account Id is : ${userIdNum}
 
 </div>
  
- <input type="submit" id = "submit_button" value="Register">
-  </form>
-<div>
+ 
+ 
+</form>
+</div>
+
 </body>
 </html>

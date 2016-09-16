@@ -97,6 +97,14 @@ if(error!=null && error.toLowerCase().trim()=="faliure" ) {%>
 </div>
 
 
+<div class="button-section">
+<form  method="post" action="forgotCredential1">
+<input type="submit" id="submit1" class= "disabled" value="forgotCredential" />
+
+
+</form>
+</div>
+
 </div>
 </div>
 </body>
