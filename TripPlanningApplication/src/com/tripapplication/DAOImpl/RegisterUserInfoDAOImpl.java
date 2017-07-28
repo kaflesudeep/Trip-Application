@@ -68,11 +68,11 @@ public class RegisterUserInfoDAOImpl {
 		Connection connDatabase = databaseConnection();
 		String getUserID = "Select USER_REGISTRATION_NUMBER from TRIPAPPLICATIONREGISTERATIONTABLE ORDER BY USER_REGISTRATION_NUMBER  ";
 		Statement stmt = null;
-		Long UserRegiNum = (long) 100000000; 
+		Long UserRegiNum = (long) 100000; 
 	try{
 		 stmt = (Statement) connDatabase.createStatement();
 		 ResultSet rs = stmt.executeQuery(getUserID);
-		 long i = (long) 100000000;
+		 long i = (long) 100000;
 		 System.out.println();
 		 while(rs.next()){
 			 

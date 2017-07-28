@@ -36,6 +36,7 @@ import com.mysql.jdbc.Connection;
 				     			    
 		            String usernameC = request.getParameter("usernameC");
 		            String passwordC = request.getParameter("passwordC"); 
+		           
 		            
 		            System.out.println(passwordC);
 		           
